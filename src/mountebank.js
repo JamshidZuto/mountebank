@@ -64,7 +64,7 @@ async function createApp (options) {
     app.use(express.static(path.join(__dirname, 'public')));
     app.use(express.static(path.join(__dirname, '../node_modules')));
     app.use(errorHandler());
-    app.use(cors({ origin: options.origin }));
+    app.use(cors({ origin: '*' }));
 
     app.disable('etag');
     app.disable('x-powered-by');
